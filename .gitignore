@@ -1,0 +1,49 @@
+# CMake and build outputs
+build-*/
+_build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+cmake_install.cmake
+install_manifest.txt
+Makefile
+*.ninja
+.ninja_*
+Testing/
+
+# Compiled artifacts
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+*.exe
+
+# Conan local/generated files
+.conan/
+conan.lock
+conanbuild.*
+conanrun.*
+conan_toolchain.cmake
+CMakePresets.json
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

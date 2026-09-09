@@ -1,0 +1,23 @@
+services:
+  dds-abstract:
+    container_name: dds-abstract
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ZENOH_CPP_REF: 1.10.1
+    image: dds-abstract:1.0.0
+    working_dir: /workspace/dds_abstract
+    stdin_open: true
+    tty: true
+    command: ["sleep", "infinity"]
+    volumes:
+      - ./:/workspace/dds_abstract
+      - ./dds_abstract_data:/workspace/dds_abstract/data
+    environment:
+      TZ: Etc/UTC
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      HTTP_PROXY: http://host.docker.internal:7897
+      HTTPS_PROXY: http://host.docker.internal:7897
+      ALL_PROXY: http://host.docker.internal:7897
